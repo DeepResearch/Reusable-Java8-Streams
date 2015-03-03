@@ -1,6 +1,9 @@
 package com.awesomeml.collection.lazy.impl;
 
+import java.util.Spliterator;
+import java.util.Spliterators;
 import java.util.stream.DoubleStream;
+import java.util.stream.StreamSupport;
 
 import com.awesomeml.collection.lazy.DoubleIterable;
 import com.awesomeml.collection.lazy.DoubleSegment;
@@ -32,15 +35,35 @@ public abstract class LazyDoubleCollection extends DoubleAbstractCollection impl
 	}
 	
 	public int size(){
-		return 0;
+		return LazyDoubleFactory.size(this);
 	}
 	
-	public DoubleStream doubleStream(){		
-		return new LazyDoubleStream(this);
+	public DoubleStream doubleStream(final int size, final boolean parallel, final int type){
+		final Spliterator.OfDouble splitter = Spliterators.spliterator(this.iterator(), size, type);
+		return StreamSupport.doubleStream(splitter, parallel);
 	}
 	
-	public DoubleStream parallel(){
-		return doubleStream().parallel();
+	public DoubleStream doubleStream(){
+		return doubleStream(false, Spliterator.IMMUTABLE);
 	}
-
+	
+	public DoubleStream doubleStream(final int size){
+		return doubleStream(size, false, Spliterator.IMMUTABLE);
+	}
+	
+	public DoubleStream doubleStreamAsParallel(){
+		return doubleStream(size(), false, Spliterator.CONCURRENT);
+	}
+	
+	public DoubleStream doubleStream(final boolean parallel, final int type){
+		return StreamSupport.doubleStream(Spliterators.spliteratorUnknownSize(this.iterator(), Spliterator.IMMUTABLE), parallel);
+	}
+	
+	public LazyDoubleCollection empty(final int size){
+		return LazyDoubleFactory.doubleSequence(new double[size]);
+	}
+	
+	public void update(final int index, final double value){
+		this.iterator();
+	}
 }

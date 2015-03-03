@@ -9,6 +9,8 @@ import java.util.Objects;
 import java.util.PrimitiveIterator;
 import java.util.function.DoubleConsumer;
 
+import com.awesomeml.collection.lazy.exception.LapackException;
+
 /**
  *
  * @author machine
@@ -48,6 +50,22 @@ public class DoubleArrayUtil {
                 return values[temp];
             }
         };
+    }
+    
+    public static void rcopy(int n, double[] dx, int dxIdx, int incx, double[] dy, int dyIdx, int incy) {
+        if (dxIdx < 0 || dxIdx + (n - 1) * incx >= dx.length) {
+            throw new LapackException("Java.raxpy", "Parameters for x aren't valid! (n = " + n + ", dx.length = " + dx.length + ", dxIdx = " + dxIdx + ", incx = " + incx + ")");
+        }
+        if (dyIdx < 0 || dyIdx + (n - 1) * incy >= dy.length) {
+            throw new LapackException("Java.raxpy", "Parameters for y aren't valid! (n = " + n + ", dy.length = " + dy.length + ", dyIdx = " + dyIdx + ", incy = " + incy + ")");
+        }
+        if (incx == 1 && incy == 1) {
+            System.arraycopy(dx, dxIdx, dy, dyIdx, n);
+        } else {
+            for (int c = 0, xi = dxIdx, yi = dyIdx; c < n; xi += incx, yi += incy, c++) {
+                dy[yi] = dx[xi];
+            }
+        }
     }
 
 }
