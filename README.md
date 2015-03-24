@@ -32,5 +32,5 @@ TODO
 	* JavaDoc.
 
 	
-	![/resources/DoubleStream.PNG] ![/resources/LazyCollection.PNG]
+	![Benchmark](/resources/DoubleStream.PNG?raw=true)
 
