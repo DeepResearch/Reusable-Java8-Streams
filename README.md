@@ -31,4 +31,6 @@ TODO
 	* More Examples.	
 	* JavaDoc.
 
+	
+	![/resources/DoubleStream.PNG] ![/resources/LazyCollection.PNG]
 
