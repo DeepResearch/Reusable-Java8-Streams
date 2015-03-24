@@ -23,7 +23,7 @@ Functional library for Java with following features
 ```	
 
 
-TODO 
+##TODO 
 
 	* Support for Integer primitives.
 	* Builder Support(i.e. Like Stream.Builder).
@@ -31,7 +31,7 @@ TODO
 	* More Examples.	
 	* JavaDoc
 
-#Checkout the benchmark
+##Checkout the benchmark
 	* Array Size = 100000000
 	* Operation = map, filter, reduce, count, max, min, sum, iterator, etc.
 
