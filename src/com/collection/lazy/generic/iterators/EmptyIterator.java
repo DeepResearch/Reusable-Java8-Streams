@@ -2,6 +2,12 @@ package com.collection.lazy.generic.iterators;
 
 import java.util.NoSuchElementException;
 
+/**
+ * 
+ * @author kkishore
+ *
+ * @param <T>
+ */
 public final class EmptyIterator<T> extends ReadOnlyListIterator<T> {
 	
     @Override

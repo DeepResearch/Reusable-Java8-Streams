@@ -5,6 +5,12 @@ import java.util.NoSuchElementException;
 import com.collection.lazy.common.State;
 import com.collection.lazy.generic.Peekable;
 
+/**
+ * 
+ * @author kkishore
+ *
+ * @param <T>
+ */
 public abstract class StatefulIterator<T> extends ReadOnlyIterator<T> implements Peekable<T> {
 	
     private State state = State.Ready;

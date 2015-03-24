@@ -8,7 +8,11 @@ import com.collection.lazy.primitive.doubles.iterators.DoubleArrayIterator;
 import com.collection.lazy.primitive.doubles.iterators.DoubleEmptyIterator;
 import com.collection.lazy.util.primitives.LazyDoubleCollection;
 
-
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public class LazyDoubleFactory {
 	
 	public static LazyDoubleCollection empty(){

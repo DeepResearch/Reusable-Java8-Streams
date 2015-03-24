@@ -2,7 +2,11 @@ package com.collection.lazy.primitive.doubles;
 
 import java.util.PrimitiveIterator;
 
-
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public abstract class DoubleAbstractSegment implements DoubleSegment, DoubleIterable{
 	
 	public DoubleSegment empty(){

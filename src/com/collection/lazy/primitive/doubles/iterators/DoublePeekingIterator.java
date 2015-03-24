@@ -2,7 +2,11 @@ package com.collection.lazy.primitive.doubles.iterators;
 
 import java.util.PrimitiveIterator;
 
-
+/**
+ * 
+ * @author kkishore
+ *
+ */
 
 public class DoublePeekingIterator extends DoubleStatefulIterator{
 	

@@ -4,6 +4,12 @@ import java.util.Iterator;
 
 import com.collection.lazy.generic.iterators.SegmentIterator;
 
+/**
+ * 
+ * @author kkishore
+ *
+ * @param <T>
+ */
 public abstract class AbstractSegment<T> implements Segment<T>, Iterable<T> {
 	  
 	@Override

@@ -2,6 +2,12 @@ package com.collection.lazy.generic;
 
 import java.util.NoSuchElementException;
 
+/**
+ * 
+ * @author kkishore
+ *
+ * @param <T>
+ */
 public interface Segment<T> {
 	
 	boolean isEmpty();

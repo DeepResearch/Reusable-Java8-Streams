@@ -6,7 +6,11 @@ import java.util.PrimitiveIterator;
 import com.collection.lazy.common.State;
 import com.collection.lazy.primitive.doubles.DoublePeekable;
 
-
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public abstract class DoubleStatefulIterator implements PrimitiveIterator.OfDouble, DoublePeekable{
 	
 	private State state = State.Ready;

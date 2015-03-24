@@ -4,6 +4,11 @@ import java.util.NoSuchElementException;
 import java.util.PrimitiveIterator;
 import java.util.function.DoubleConsumer;
 
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public class DoubleEmptyIterator implements PrimitiveIterator.OfDouble{
 
 	@Override

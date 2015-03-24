@@ -5,8 +5,14 @@ import java.util.Iterator;
 import com.collection.lazy.generic.iterators.ArrayIterator;
 import com.collection.lazy.generic.iterators.EmptyIterator;
 import com.collection.lazy.util.LazyCollection;
+
 import static com.collection.lazy.generic.factory.Unchecked.cast;
 
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public class LazyFactory {
 	
 	public static <T> LazyCollection<T> empty(){
@@ -22,7 +28,6 @@ public class LazyFactory {
 		return empty();
 	}
 	
-	@SuppressWarnings("unused")
 	@SafeVarargs
 	private static <T> LazyCollection<T> internal(final T... items){
 		return sequence(items);
@@ -78,11 +83,19 @@ public class LazyFactory {
 			};
 	 }
 	 
+	 public static <T> LazyCollection<T> one(final T first) {
+	        return internal(first);
+	 }
+	 	 
+	 public static <T> LazyCollection<T> sequence(final T first, final T second) {
+	        return internal(first, second);
+	 }
+	 
 	 public static <T> LazyCollection<T> cons(final T t, final Iterable<? extends T> iterable){
 		 return new LazyCollection<T>() {
 			@Override
 			public Iterator<T> iterator() {
-				return null;
+				return IteratorFactory.cons(t, iterable.iterator());
 			}
 			 
 		};
@@ -91,5 +104,5 @@ public class LazyFactory {
 	 public static <T> int size(final Iterable<? extends T> iterable){
 		 return IteratorFactory.size(iterable.iterator());
 	 }
-
+	 
 }

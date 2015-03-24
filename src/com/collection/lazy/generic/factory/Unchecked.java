@@ -1,5 +1,10 @@
 package com.collection.lazy.generic.factory;
 
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public final class Unchecked {
 	
 	private Unchecked() {}

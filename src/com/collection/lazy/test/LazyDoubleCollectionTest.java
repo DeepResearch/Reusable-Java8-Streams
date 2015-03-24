@@ -2,7 +2,11 @@ package com.collection.lazy.test;
 import com.collection.lazy.primitive.doubles.factory.LazyDoubleFactory;
 import com.collection.lazy.util.primitives.LazyDoubleCollection;
 
-
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public class LazyDoubleCollectionTest {
 
 	public static void main(String[] args) {

@@ -2,7 +2,11 @@ package com.collection.lazy.primitive.doubles;
 
 import java.util.NoSuchElementException;
 
-
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public interface DoubleSegment {
 	
 	boolean isEmpty();

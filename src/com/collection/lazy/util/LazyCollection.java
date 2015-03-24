@@ -10,6 +10,12 @@ import com.collection.lazy.generic.First;
 import com.collection.lazy.generic.Segment;
 import com.collection.lazy.generic.factory.LazyFactory;
 
+/**
+ * 
+ * @author kkishore
+ *
+ * @param <T>
+ */
 public abstract class LazyCollection<T> extends AbstractCollection<T> implements Iterable<T>, First<T>, Segment<T> {
 	
 	public T first(){

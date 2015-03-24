@@ -2,6 +2,11 @@ package com.collection.lazy.primitive.doubles;
 
 import java.util.PrimitiveIterator;
 
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public abstract class DoubleAbstractCollection implements DoubleCollection{
 	
 	protected DoubleAbstractCollection() {

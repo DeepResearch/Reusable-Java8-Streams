@@ -2,6 +2,12 @@ package com.collection.lazy.generic.iterators;
 
 import java.util.ListIterator;
 
+/**
+ * 
+ * @author kkishore
+ *
+ * @param <T>
+ */
 public abstract class ReadOnlyListIterator<T> implements ListIterator<T> {
 	
     public final void remove() {

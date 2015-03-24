@@ -2,6 +2,12 @@ package com.collection.lazy.generic.iterators;
 
 import com.collection.lazy.generic.Segment;
 
+/**
+ * 
+ * @author kkishore
+ *
+ * @param <T>
+ */
 public final class SegmentIterator<T> extends ReadOnlyIterator<T> {
 	
 	private Segment<T> segment;

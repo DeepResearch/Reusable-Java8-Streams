@@ -11,6 +11,11 @@ import com.collection.lazy.primitive.doubles.DoubleSegment;
 import com.collection.lazy.primitive.doubles.FirstDouble;
 import com.collection.lazy.primitive.doubles.factory.LazyDoubleFactory;
 
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public abstract class LazyDoubleCollection extends DoubleAbstractCollection implements DoubleIterable, FirstDouble, DoubleSegment{
 	
 	public LazyDoubleCollection(){

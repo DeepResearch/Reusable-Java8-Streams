@@ -4,6 +4,11 @@ import java.util.NoSuchElementException;
 import java.util.PrimitiveIterator;
 import java.util.function.DoubleConsumer;
 
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public class DoubleArrayIterator implements PrimitiveIterator.OfDouble{
 	
 	private final double[] array;

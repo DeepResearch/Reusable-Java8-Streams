@@ -5,6 +5,11 @@ import java.util.PrimitiveIterator;
 
 import com.collection.lazy.primitive.doubles.iterators.DoublePeekingIterator;
 
+/**
+ * 
+ * @author kkishore
+ *
+ */
 public class DoubleIteratorFactory {
 	
 	public static double head(final PrimitiveIterator.OfDouble iterator){
