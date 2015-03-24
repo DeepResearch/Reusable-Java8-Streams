@@ -1,6 +1,9 @@
 # Reusable-Java8-Streams
 A lazy data structure for Reusable Java8 Streams. 
 
+![Material Witness](resources/DoubleStream.png)
+
+
 Functional library for Java with following features
 
 	* Tries to be as lazy as possible.
@@ -29,8 +32,5 @@ TODO
 	* Builder Support(i.e. Like Stream.Builder).
 	* Performance Benchmarks.
 	* More Examples.	
-	* JavaDoc.
-
-	
-	![Material Witness](resources/DoubleStream.png)
+	* JavaDoc
 
