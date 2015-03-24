@@ -6,7 +6,7 @@ Functional library for Java with following features
 	* Tries to be as lazy as possible.
 	* Seamless support for Java8 stream
 	* Works with Iterable, Iterator, Arrays, etc.
-	* Primitive lazy collections
+	* Primitive lazy collections(Support for Int is in progress...)
 
 ## Quick Start
 
@@ -16,7 +16,6 @@ Functional library for Java with following features
 		for(int i = 0; i < size; i++){
 			array[i] = i;
 		}
-		// TODO Auto-generated method stub
 		final LazyDoubleCollection collection = LazyDoubleFactory.doubleSequence(array);		
 		final long count = collection.doubleStream().parallel().map(x -> x + 1).filter(x -> x > 800).count();
 		final double sum = collection.doubleStream().parallel().filter(x -> x < 10000).reduce((x, y) -> x + y).getAsDouble();
