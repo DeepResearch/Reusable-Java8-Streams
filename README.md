@@ -1,7 +1,13 @@
 # Reusable-Java8-Streams
 A lazy data structure for Reusable Java8 Streams. 
 
-![Material Witness](https://github.com/kishorenayar/Reusable-Java8-Streams/blob/master/resources/DoubleStream.PNG)
+Checkout the benchmark
+
+Array Size = 100000000
+Operation = map, filter, reduce, count, max, min, sum, iterator, etc.
+
+![DoubleStream](https://github.com/kishorenayar/Reusable-Java8-Streams/blob/master/resources/DoubleStream.PNG)
+![LazyDoubleCollection](https://github.com/kishorenayar/Reusable-Java8-Streams/blob/master/resources/LazyCollection.PNG)
 
 
 Functional library for Java with following features
