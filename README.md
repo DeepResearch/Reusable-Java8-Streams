@@ -32,5 +32,5 @@ TODO
 	* JavaDoc.
 
 	
-	![Benchmark](https://github.com/kishorenayar/Reusable-Java8-Streams/blob/master/resources/DoubleStream.PNG "Benchmark")
+	![Material Witness](resources/DoubleStream.png)
 
