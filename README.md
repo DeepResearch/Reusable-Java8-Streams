@@ -1,7 +1,7 @@
 # Reusable-Java8-Streams
 A lazy data structure for Reusable Java8 Streams. 
 
-![Material Witness](resources/DoubleStream.png)
+![Material Witness](/resources/DoubleStream.png)
 
 
 Functional library for Java with following features
