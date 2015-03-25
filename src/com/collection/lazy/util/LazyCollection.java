@@ -1,12 +1,14 @@
 package com.collection.lazy.util;
 
-import java.util.AbstractCollection;
 import java.util.Spliterator;
 import java.util.Spliterators;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+import com.collection.lazy.common.Builder;
+import com.collection.lazy.common.LazyBuilder;
 import com.collection.lazy.generic.First;
+import com.collection.lazy.generic.GenericAbstractCollection;
 import com.collection.lazy.generic.Segment;
 import com.collection.lazy.generic.factory.LazyFactory;
 
@@ -16,7 +18,7 @@ import com.collection.lazy.generic.factory.LazyFactory;
  *
  * @param <T>
  */
-public abstract class LazyCollection<T> extends AbstractCollection<T> implements Iterable<T>, First<T>, Segment<T> {
+public abstract class LazyCollection<T> extends GenericAbstractCollection<T> implements Iterable<T>, First<T>, Segment<T> {
 	
 	public T first(){
 		return LazyFactory.first(this);
@@ -64,5 +66,4 @@ public abstract class LazyCollection<T> extends AbstractCollection<T> implements
 	public Stream<T> streamAsParallel(){
 		return stream(size(), true, Spliterator.CONCURRENT);
 	}
-
 }

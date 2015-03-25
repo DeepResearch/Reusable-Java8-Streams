@@ -2,6 +2,8 @@ package com.collection.lazy.generic.factory;
 
 import java.util.Iterator;
 
+import com.collection.lazy.common.Builder;
+import com.collection.lazy.common.LazyBuilder;
 import com.collection.lazy.generic.iterators.ArrayIterator;
 import com.collection.lazy.generic.iterators.EmptyIterator;
 import com.collection.lazy.util.LazyCollection;
@@ -103,6 +105,10 @@ public class LazyFactory {
 	 
 	 public static <T> int size(final Iterable<? extends T> iterable){
 		 return IteratorFactory.size(iterable.iterator());
+	 }
+	 
+	 public static <T> Builder<T> builder(){
+			return new LazyBuilder.LazyBuilderImpl<T>();
 	 }
 	 
 }
