@@ -26,8 +26,8 @@ Functional library for Java with following features
 ```java
 		final Builder<Integer> builder = LazyFactory.builder();
 		final LazyCollection<Integer> collection = builder.add(1).add(2).add(3).add(4).add(5).build();
-		collection.map(input -> input * input).forEach(product -> System.out.println(product));
-		collection.filter(input -> input > 3).count();
+		collection.stream().map(input -> input * input).forEach(product -> System.out.println(product));
+		collection.stream().filter(input -> input > 3).count();
 ```	
 ##TODO 
 
