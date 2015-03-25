@@ -9,7 +9,7 @@ Functional library for Java with following features
 	* Primitive lazy collections(Support for Int is in progress...)
 
 ## Quick Start
-
+### Array Example
 ```java
 		final int size = 100000000;
 		final double[] array = new double[size];
@@ -22,7 +22,13 @@ Functional library for Java with following features
 		System.out.println("Count : "+count+" \n Sum : "+sum);
 ```	
 
-
+### Builder Example
+```java
+		final Builder<Integer> builder = LazyFactory.builder();
+		final LazyCollection<Integer> collection = builder.add(1).add(2).add(3).add(4).add(5).build();
+		collection.map(input -> input * input).forEach(product -> System.out.println(product));
+		collection.filter(input -> input > 3).count();
+```	
 ##TODO 
 
 	* Support for Integer primitives.
